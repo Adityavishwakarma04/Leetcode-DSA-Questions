@@ -5,17 +5,16 @@ public:
         int end=height.size()-1;
         int maxi=0;
         while(start<end){
-            int area=min(height[start],height[end])*(end-start);
-            maxi=max(maxi, area);
-        
-            if(height[start]<height[end]){
-                start++;
-            }
-            else{
-                end--;
-            }
+            int area=(min(height[start], height[end]))*(end-start);
+            maxi=max(area, maxi);
+    
+        if(height[start]< height[end]){
+            start++;
         }
-
-       return maxi; 
+        else{
+            end--;
+        }
+        }
+        return maxi;
     }
 };
